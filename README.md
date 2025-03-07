@@ -1,1 +1,1 @@
-# prog.estruturada-ac1
+# exercicios aula prog estruturada sobre python
