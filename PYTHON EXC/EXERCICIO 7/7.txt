@@ -1,0 +1,162 @@
+
+///////
+
+def calcularreajustesalario(salario):
+    if salario <= 400.00:
+        percentual = 15
+    elif salario <= 800.00:
+        percentual = 12
+    elif salario <= 1200.00:
+        percentual = 10
+    elif salario <= 2000.00:
+        percentual = 7
+    else:
+        percentual = 4
+
+    reajuste = salario * percentual / 100
+    novo_salario = salario + reajuste
+
+    return novo_salario, reajuste, percentual
+
+
+salario = float(input())
+
+
+novo_salario, valor_reajuste, percentual_reajuste = calcularreajustesalario(salario)
+
+
+print("Novo salario: {:.2f}".format(novo_salario))
+print("Reajuste ganho: {:.2f}".format(valor_reajuste))
+print("Em percentual: {} %".format(percentual_reajuste))
+
+
+////////////
+
+
+
+contagem_pares = 0
+for _ in range(5):
+    valor = int(input())
+    if valor % 2 == 0:
+        contagem_pares += 1
+
+print("{} valores pares".format(contagem_pares))
+
+
+///////////
+
+
+
+
+
+valor1, valor2 = map(int, input().split())
+    
+inicio = min(valor1, valor2)
+fim = max(valor1, valor2)
+
+soma = 0
+
+for i in range(inicio, fim + 1):
+    if i % 13 != 0:
+        soma += i
+
+        print(soma)
+
+//////////////
+
+
+
+v = int(input())
+
+N = [0] * 10
+
+N[0] = v
+
+
+for i in range(1, 10):
+    N[i] = N[i - 1] * 2
+
+for i in range(10):
+    print("N[{}] = {}".format(i, N[i]))
+
+////////////
+
+
+
+# Leitura do valor de N
+N = int(input())
+
+# Leitura dos valores do vetor X
+X = list(map(int, input().split()))
+
+# Encontrar o menor valor e sua posição
+menor = X[0]
+posicao = 0
+for i in range(1, N):
+    if X[i] < menor:
+        menor = X[i]
+        posicao = i
+
+# Saída dos resultados
+print("Menor valor:", menor)
+print("Posicao:", posicao)
+
+
+
+/////////////
+
+
+
+
+
+coluna = int(input())
+conta = input()
+
+M = []
+for _ in range(12):
+    linha = []
+    for _ in range(12):
+        linha.append(float(input()))
+    M.append(linha)
+
+soma = 0
+elementos = 0
+for i in range(12):
+    soma += M[i][coluna]
+    elementos += 1
+
+if conta == 'S':
+    print("{:.1f}".format(soma))
+elif conta == 'M':
+    media = soma / elementos
+    print("{:.1f}".format(media))
+
+
+//////////////
+
+
+def comparar_str(x1, x2):
+    if len(x1) != len(x2):
+        return len(x1) - len(x2)
+    else:
+        return 0
+
+g = int(input())
+
+
+casoteste = []
+
+for _ in range(g):
+    strings = input().split()
+    casoteste.append(strings)
+
+for strings in casoteste:
+    strings.sort(key=lambda x: (len(x), strings.index(x)))
+
+for strings in casoteste:
+    print(*strings)
+
+
+
+
+   

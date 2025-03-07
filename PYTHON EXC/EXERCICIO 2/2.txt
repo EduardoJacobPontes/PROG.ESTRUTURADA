@@ -1,0 +1,31 @@
+ano = int(input("digite o ano que voce quer analisar"))
+
+bissexto = (ano % 4 == 00 and (ano %  100 != 00 or ano % 400 == 00))
+
+
+def bissexto(ano):
+     if ano == bissexto:
+       print("seu ano bissexto é", True) 
+     else:
+      print("seu ano bissexto é", False)
+
+bissexto(ano)
+
+
+
+
+
+# DADOS
+
+valor_hora = float(input("insira o salrio recebido por hora:"))
+num_horas =  float(input("insira o numero de horas trabalhadas:"))
+imposto = 0.275
+
+# desenvolvendo a funcao calcula salario
+def calcula_salario(valor_hora, num_horas, imposto):
+     return valor_hora * num_horas - imposto
+
+# calcular o imposto de renda
+def main():
+     print("o salario sera", calcula_salario(valor_hora, num_horas, imposto))
+main()
